@@ -1,4 +1,4 @@
-import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+import { HamburgerMenuIcon, OpenInNewWindowIcon } from '@radix-ui/react-icons'
 import { Button } from '../ui/button'
 import {
   DropdownMenu,
@@ -35,13 +35,15 @@ export function Header() {
             </Button>
           </li>
           <li>
-            <Button variant="ghost">
+            <Button variant="link">
               <a
+                className='flex items-end'
                 href="https://dev-nook.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
                 Blog
+                <OpenInNewWindowIcon />
               </a>
             </Button>
           </li>
@@ -55,26 +57,28 @@ export function Header() {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" forceMount>
           <DropdownMenuGroup>
-            <DropdownMenuItem>
+            <DropdownMenuItem asChild>
               <a href="#about">About</a>
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem asChild>
               <a href="#experience">Experience</a>
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem asChild>
               <a href="#projects">Projects</a>
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem asChild>
               <a href="#knowledges">Knowledges</a>
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              <a
-                href="https://dev-nook.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Blog
-              </a>
+            <DropdownMenuItem asChild>
+                <a
+                  className='flex items-end text-primary hover:underline'
+                  href="https://dev-nook.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Blog
+                  <OpenInNewWindowIcon />
+                </a>
             </DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>
