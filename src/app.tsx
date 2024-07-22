@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import { FormEvent, useEffect, useRef, useState } from 'react'
+import { AboutCommand } from './components/commands/about-command'
 import { BlogCommand } from './components/commands/blog-command'
 import { HelpCommand } from './components/commands/help-command'
 import { ProjectsCommand } from './components/commands/projects-command'
@@ -11,12 +12,12 @@ const commands = [
     description: 'displays a welcome message',
   },
   {
-    name: 'help',
-    description: 'displays a list of available commands',
+    name: 'about',
+    description: 'displays information about me',
   },
   {
-    name: 'clear',
-    description: 'clears the terminal',
+    name: 'help',
+    description: 'displays a list of available commands',
   },
   {
     name: 'projects',
@@ -25,6 +26,10 @@ const commands = [
   {
     name: 'blog',
     description: 'redirects you to my personal blog',
+  },
+  {
+    name: 'clear',
+    description: 'clears the terminal',
   },
 ]
 
@@ -87,13 +92,13 @@ export function App() {
   }
 
   return (
-    <div className="bg-rosePine-base w-full h-screen flex items-center justify-center p-8">
-      <div className="relative max-w-7xl w-full bg-rosePine-surface aspect-video rounded-lg px-4 shadow-md overflow-auto scrollbar">
+    <div className="bg-rosePine-base w-full h-screen flex items-center justify-center sm:p-8">
+      <div className="relative max-w-7xl w-full bg-rosePine-surface max-sm:h-screen sm:aspect-video sm:rounded-lg px-4 shadow-md overflow-auto scrollbar">
         <header className="sticky bg-rosePine-surface top-0 left-0 right-0 py-4">
           <div className="flex gap-2">
-            <div className="size-3 rounded-full bg-red-400 transition-colors hover:bg-red-500"></div>
-            <div className="size-3 rounded-full bg-yellow-400 transition-colors hover:bg-yellow-500"></div>
-            <div className="size-3 rounded-full bg-green-400 transition-colors hover:bg-green-500"></div>
+            <div className="size-3 rounded-full bg-red-500 transition-colors hover:bg-red-600"></div>
+            <div className="size-3 rounded-full bg-yellow-500 transition-colors hover:bg-yellow-600"></div>
+            <div className="size-3 rounded-full bg-green-500 transition-colors hover:bg-green-600"></div>
           </div>
         </header>
         <div className="py-4">
@@ -113,6 +118,8 @@ export function App() {
                   return <ProjectsCommand key={`${index}-${command}`} />
                 case 'blog':
                   return <BlogCommand key={`${index}-${command}`} />
+                case 'about':
+                  return <AboutCommand key={`${index}-${command}`} />
                 default:
                   return null
               }

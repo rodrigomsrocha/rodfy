@@ -22,6 +22,9 @@ export default {
           highlightHigh: '#524f67',
         },
       },
+      fontFamily: {
+        mono: ['IBM Plex Mono', 'monospace'],
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')],
