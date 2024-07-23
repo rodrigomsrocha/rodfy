@@ -2,6 +2,7 @@ import { ChevronRight } from 'lucide-react'
 import { FormEvent, useEffect, useRef, useState } from 'react'
 import { AboutCommand } from './components/commands/about-command'
 import { BlogCommand } from './components/commands/blog-command'
+import { EducationCommand } from './components/commands/education-command'
 import { HelpCommand } from './components/commands/help-command'
 import { ProjectsCommand } from './components/commands/projects-command'
 import { SkillsCommand } from './components/commands/skills-command'
@@ -27,6 +28,10 @@ const commands = [
   {
     name: 'projects',
     description: 'displays a list of projects',
+  },
+  {
+    name: 'education',
+    description: 'displays a list of places where learned my skills',
   },
   {
     name: 'blog',
@@ -127,6 +132,8 @@ export function App() {
                   return <AboutCommand key={`${index}-${command}`} />
                 case 'skills':
                   return <SkillsCommand key={`${index}-${command}`} />
+                case 'education':
+                  return <EducationCommand key={`${index}-${command}`} />
                 default:
                   return null
               }
