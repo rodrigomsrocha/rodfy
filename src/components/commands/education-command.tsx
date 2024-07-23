@@ -23,8 +23,11 @@ export function EducationCommand() {
       <div className="text-rosePine-text font-mono space-y-8 pl-2">
         <strong>Where I learned this things</strong>
         <div>
-          <Tabs.Root className="flex gap-4" defaultValue="puc">
-            <Tabs.List className="flex w-1/4 flex-col gap-2 items-start justify-stretch">
+          <Tabs.Root
+            className="flex max-md:flex-col max-md:gap-8 gap-4"
+            defaultValue="puc"
+          >
+            <Tabs.List className="flex md:w-1/4 md:flex-col gap-2 items-start justify-stretch">
               <Tabs.Trigger value="puc" asChild>
                 <span className="text-rosePine-subtle data-[state=active]:text-rosePine-iris font-bold border border-rosePine-subtle data-[state=active]:border-rosePine-iris w-full p-1.5">
                   PUC Minas
