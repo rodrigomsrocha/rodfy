@@ -4,7 +4,13 @@ export function AboutCommand() {
   return (
     <div className="space-y-4">
       <div className="space-y-2">
-        <strong className="block text-rosePine-rose font-mono">~/rod/</strong>
+        <div className="text-rosePine-text flex items-center gap-2">
+          <strong className="block text-rosePine-rose font-mono">user</strong>
+          <span>on</span>
+          <strong className="block text-rosePine-iris font-mono">
+            ~/rodfy
+          </strong>
+        </div>
         <div className="flex gap-2 items-end">
           <ChevronRight className="size-5 text-rosePine-pine" strokeWidth={3} />
           <span className="text-rosePine-foam font-mono font-semibold">
@@ -44,8 +50,11 @@ export function AboutCommand() {
             <strong className="font-semibold text-rosePine-iris">
               JavaScript
             </strong>
-            , including frameworks and libraries like React and Node.js. I have
-            solid skills in{' '}
+            , including frameworks and libraries like{' '}
+            <strong className="font-semibold text-rosePine-iris">
+              React and Node.js
+            </strong>
+            . I have solid skills in{' '}
             <strong className="font-semibold text-rosePine-iris">
               Tailwind, HTML, and CSS
             </strong>

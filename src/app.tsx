@@ -4,6 +4,7 @@ import { AboutCommand } from './components/commands/about-command'
 import { BlogCommand } from './components/commands/blog-command'
 import { HelpCommand } from './components/commands/help-command'
 import { ProjectsCommand } from './components/commands/projects-command'
+import { SkillsCommand } from './components/commands/skills-command'
 import { WelcomeCommand } from './components/commands/welcome-command'
 
 const commands = [
@@ -14,6 +15,10 @@ const commands = [
   {
     name: 'about',
     description: 'displays information about me',
+  },
+  {
+    name: 'skills',
+    description: 'displays a list of my skills',
   },
   {
     name: 'help',
@@ -120,6 +125,8 @@ export function App() {
                   return <BlogCommand key={`${index}-${command}`} />
                 case 'about':
                   return <AboutCommand key={`${index}-${command}`} />
+                case 'skills':
+                  return <SkillsCommand key={`${index}-${command}`} />
                 default:
                   return null
               }
@@ -127,9 +134,15 @@ export function App() {
             <div ref={commandInputRef}></div>
           </div>
           <div className="space-y-2">
-            <strong className="block text-rosePine-rose font-mono">
-              ~/rod/
-            </strong>
+            <div className="text-rosePine-text flex items-center gap-2">
+              <strong className="block text-rosePine-rose font-mono">
+                user
+              </strong>
+              <span>on</span>
+              <strong className="block text-rosePine-iris font-mono">
+                ~/rodfy
+              </strong>
+            </div>
             <form
               onSubmit={handleCommandSubmit}
               className="flex gap-2 items-end"
@@ -144,7 +157,7 @@ export function App() {
                 autoFocus
                 autoComplete="off"
                 name="command"
-                className={`font-semibold font-mono caret-rosePine-text bg-transparent outline-none ${isCommandAvailable ? 'text-rosePine-foam' : 'text-rosePine-love'}`}
+                className={`w-full font-semibold font-mono caret-rosePine-text bg-transparent outline-none ${isCommandAvailable ? 'text-rosePine-foam' : 'text-rosePine-love'}`}
                 type="text"
               />
             </form>
