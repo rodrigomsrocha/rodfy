@@ -4,6 +4,7 @@ import { AboutCommand } from './components/commands/about-command'
 import { BlogCommand } from './components/commands/blog-command'
 import { EducationCommand } from './components/commands/education-command'
 import { HelpCommand } from './components/commands/help-command'
+import { NotFoundCommand } from './components/commands/not-found-command'
 import { ProjectsCommand } from './components/commands/projects-command'
 import { SkillsCommand } from './components/commands/skills-command'
 import { SocialCommand } from './components/commands/social-command'
@@ -141,8 +142,15 @@ export function App() {
                   return <EducationCommand key={`${index}-${command}`} />
                 case 'social':
                   return <SocialCommand key={`${index}-${command}`} />
-                default:
+                case 'clear':
                   return null
+                default:
+                  return (
+                    <NotFoundCommand
+                      command={command}
+                      key={`${index}-${command}`}
+                    />
+                  )
               }
             })}
             <div ref={commandInputRef}></div>

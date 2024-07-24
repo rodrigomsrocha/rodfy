@@ -48,7 +48,7 @@ export function WelcomeCommand() {
                 here
               </a>
             </li>
-            <li className="">
+            <li>
               To see the available commands, type{' '}
               <pre className="font-bold text-rosePine-iris inline">`help`</pre>
             </li>
