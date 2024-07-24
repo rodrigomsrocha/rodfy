@@ -30,7 +30,7 @@ export function EducationCommand() {
             <Tabs.List className="flex md:w-1/4 md:flex-col gap-2 items-start justify-stretch">
               <Tabs.Trigger value="puc" asChild>
                 <span className="text-rosePine-subtle data-[state=active]:text-rosePine-iris font-bold border border-rosePine-subtle data-[state=active]:border-rosePine-iris w-full p-1.5">
-                  PUC Minas
+                  PUC MG
                 </span>
               </Tabs.Trigger>
               <Tabs.Trigger value="rocketseat" asChild>

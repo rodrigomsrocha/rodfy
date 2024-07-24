@@ -1,4 +1,4 @@
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react';
 
 interface HelpCommandProps {
   commands: { name: string; description: string }[]
@@ -24,12 +24,15 @@ export function HelpCommand({ commands }: HelpCommandProps) {
       </div>
       <div className="text-rosePine-text font-mono space-y-8 pl-2">
         <strong>Here&apos;s the list of available commands.</strong>
-        <div>
+        <div className="space-y-4">
           {commands.map((command) => {
             return (
-              <div key={command.name} className="grid grid-cols-4">
+              <div
+                key={command.name}
+                className="grid gap-2 grid-cols-1 sm:grid-cols-4"
+              >
                 <strong>{command.name}</strong>
-                <p className="col-span-3">- {command.description}</p>
+                <p className="pl-4 col-span-3">- {command.description}</p>
               </div>
             )
           })}
