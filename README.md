@@ -1,30 +1,79 @@
-# React + TypeScript + Vite
+# Rodfy Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my interactive portfolio! This project showcases my skills and experiences through a terminal-based interface.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live version of my portfolio: [rodfy.vercel.app](https://rodfy.vercel.app/)
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This portfolio was built using:
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework.
+- **TypeScript**: A typed superset of JavaScript.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## 📜 Features
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Interactive Terminal**: Users can type commands to learn more about me.
+- **Modern Design**: Utilizes Tailwind CSS for a clean and responsive design.
+- **TypeScript**: Ensures code quality and maintainability.
+
+## 🔧 Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/rodrigomsrocha/rodfy.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd rodfy
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+   The project should now be running on `http://localhost:5173`.
+
+## 🛠️ Technologies Used
+
+- **React**
+- **Tailwind CSS**
+- **TypeScript**
+- **Vercel**: For deployment
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/rodrigomsrocha/rodfy/issues).
+
+## 📧 Contact
+
+Feel free to reach out if you have any questions or feedback:
+
+- **LinkedIn**: [Rodrigo Rocha](https://www.linkedin.com/in/rodrigo-rocha-547585214)
+- **Email**: [rmsr1306@gmail.com](mailto:rmsr1306@gmail.com)
+
+---
+
+Thank you for checking out my project! 😊
+
+---
