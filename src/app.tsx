@@ -6,6 +6,7 @@ import { EducationCommand } from './components/commands/education-command'
 import { HelpCommand } from './components/commands/help-command'
 import { ProjectsCommand } from './components/commands/projects-command'
 import { SkillsCommand } from './components/commands/skills-command'
+import { SocialCommand } from './components/commands/social-command'
 import { WelcomeCommand } from './components/commands/welcome-command'
 
 const commands = [
@@ -32,6 +33,10 @@ const commands = [
   {
     name: 'education',
     description: 'displays a list of places where learned my skills',
+  },
+  {
+    name: 'social',
+    description: 'list of my social media links',
   },
   {
     name: 'blog',
@@ -134,6 +139,8 @@ export function App() {
                   return <SkillsCommand key={`${index}-${command}`} />
                 case 'education':
                   return <EducationCommand key={`${index}-${command}`} />
+                case 'social':
+                  return <SocialCommand key={`${index}-${command}`} />
                 default:
                   return null
               }
